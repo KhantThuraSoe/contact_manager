@@ -1,13 +1,14 @@
-import * as React from 'react';
+import React from 'react';
 import Contact from './Contact';
-export interface IContactListProps {}
-
+import { useSelector } from 'react-redux';
+import type { RootState } from '../../redux/store/store';
 export default function ContactList(): JSX.Element {
+	const contacts = useSelector((state: RootState) => state.contact.value);
 	return (
-		<ul className="my-5">
-			<Contact />
-			<Contact />
-			<Contact />
+		<ul className="my-8">
+			{contacts.map((contact) => (
+				<Contact key={contact.id} contact={contact} />
+			))}
 		</ul>
 	);
 }

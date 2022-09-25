@@ -7,7 +7,7 @@ export default function ContactBody(): JSX.Element {
 	return (
 		<main>
 			<section className="px-[20px]">
-				<section className="w-full bg-gray-100 mx-auto flex flex-row px-2 py-1 rounded-full">
+				<section className="flex flex-row w-full px-2 py-1 mx-auto bg-gray-100 rounded-full">
 					<BiSearch className="h-auto my-auto" />
 					<input
 						type="text"
@@ -18,7 +18,7 @@ export default function ContactBody(): JSX.Element {
 				<article>
 					<ContactList />
 				</article>
-				<button className="absolute bottom-8 right-4 p-3 rounded-full bg-green-600 text-white cursor-pointer hover:scale-125 duration-300">
+				<button className="absolute p-3 text-white duration-300 bg-green-600 rounded-full cursor-pointer bottom-8 right-4 hover:scale-125">
 					<BiUpArrow className="translate-y-[-6%]" />
 				</button>
 			</section>
