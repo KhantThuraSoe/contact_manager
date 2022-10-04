@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { BsFillPersonFill, BsFillTelephoneFill } from 'react-icons/bs';
 import { MdEmail } from 'react-icons/md';
-import { FaAddressBook } from 'react-icons/fa';
+import { MdLocationOn } from 'react-icons/md';
 import { FcAddImage } from 'react-icons/fc';
 
 export interface Props {
@@ -20,6 +20,9 @@ export default function AddContactModel({ setShow }: Props) {
 		<section className="fixed top-0 left-0 w-screen h-screen text-[.75rem] bg-[rgba(0,0,0,0.5)] z-10 flex items-center justify-center">
 			<article className="w-auto h-auto px-4 py-4 bg-white rounded-tr-[2rem] rounded-bl-[2rem]">
 				<form className="flex flex-col gap-4">
+					<h2 className="mx-auto font-extrabold text-green-500 text-[1rem]">
+						Add New Contact
+					</h2>
 					<section className="flex flex-row gap-2">
 						<label htmlFor="name">
 							<BsFillPersonFill className="h-full scale-150" />
@@ -58,7 +61,7 @@ export default function AddContactModel({ setShow }: Props) {
 					</section>
 					<section className="flex flex-row gap-2">
 						<label htmlFor="address">
-							<FaAddressBook className="translate-y-[30%] scale-150" />
+							<MdLocationOn className="translate-y-[30%] scale-150" />
 						</label>
 						<textarea
 							id="address"
@@ -75,7 +78,7 @@ export default function AddContactModel({ setShow }: Props) {
 						</label>
 						<input type="file" name="imageFile" id="imageFile" />
 					</section>
-					<section className="flex flex-row gap-4 mx-auto">
+					<section className="flex flex-row gap-4 mx-auto my-3">
 						<button
 							type="submit"
 							className="px-4 py-1 text-white duration-300 bg-green-500 border-none rounded-full outline-none hover:bg-green-300 hover:text-black"
